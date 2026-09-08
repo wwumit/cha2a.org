@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHA2A — a DID method for agentic identity and software source attestation</title>
+<meta name="description" content="did:cha2a is a registry-mediated DID method for agent identity and software source attestation, specified with an open conformance suite.">
+<style>
+  :root { --ink:#1a1f2e; --muted:#5b6472; --line:#e3e7ee; --accent:#2456c8; --bg:#fbfcfe; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); }
+  main { max-width:760px; margin:0 auto; padding:56px 24px 80px; }
+  h1 { font-size:1.9rem; letter-spacing:-.01em; margin-bottom:.35em; }
+  .did { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.95rem; color:var(--accent); }
+  .tagline { color:var(--muted); font-size:1.05rem; margin-bottom:2.2em; }
+  h2 { font-size:1.05rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:2.2em 0 .7em; }
+  p { margin-bottom:1em; }
+  ul { margin:0 0 1em 1.2em; }
+  li { margin-bottom:.45em; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .card { border:1px solid var(--line); border-radius:10px; padding:18px 20px; background:#fff; margin-bottom:14px; }
+  .card b { display:block; margin-bottom:.2em; }
+  .card span { color:var(--muted); font-size:.92rem; }
+  footer { margin-top:3em; padding-top:1.2em; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>CHA2A</h1>
+  <p class="did">did:cha2a</p>
+  <p class="tagline">A registry-mediated DID method for agentic identity and software source attestation — specified openly, with a byte-stable conformance suite.</p>
+
+  <h2>Specification</h2>
+  <div class="card">
+    <b><a href="https://github.com/wwumit/did-method-cha2a/blob/v1.1.0/did-method-cha2a.md">did-method-cha2a.md — v1.1.0</a></b>
+    <span>Method syntax and ABNF, all four DID operations (Create / Read / Update / Deactivate), DID Document structure and discovery, security and privacy considerations, and a conformance surface with test vectors.</span>
+  </div>
+
+  <h2>Conformance suite</h2>
+  <div class="card">
+    <b><a href="https://github.com/wwumit/cha2a-conformance">wwumit/cha2a-conformance</a></b>
+    <span>Fixtures, two independent reference verifiers (Python and Node.js, parity-checked), pinned by <code>MANIFEST.sha256</code> for offline re-verification. Six gates, 68 vectors.</span>
+  </div>
+
+  <h2>Status</h2>
+  <ul>
+    <li>Draft specification, under review for registration in the <a href="https://github.com/w3c/did-extensions/pull/744">W3C DID Extensions registry (PR&nbsp;#744)</a>.</li>
+    <li>Reference implementation running at <a href="https://compliancehub.cn">compliancehub.cn</a> — discovery at <code>/.well-known/cha2a</code>, resolution at <code>/api/v1/did/&lt;did&gt;</code>.</li>
+    <li>License: Apache-2.0. Contributions and issues via the GitHub repositories above.</li>
+  </ul>
+
+  <footer>This site is the protocol identity page for the did:cha2a method. It hosts nothing normative; the specification and conformance suite live in their versioned repositories.</footer>
+</main>
+</body>
+</html>
